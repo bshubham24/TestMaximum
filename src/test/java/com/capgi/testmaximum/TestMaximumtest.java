@@ -3,11 +3,15 @@
  */
 package com.capgi.testmaximum;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class TestMaximumtest {
 	@Test
-	public void T() {
-
+	public void TestMaximumIntegerAtFirstPosition() {
+		TestMaximum testMaximum = new TestMaximum();
+		Integer result = testMaximum.maximum(100, 30, 40);
+		assertEquals((Integer) 100, result);
 	}
 }
