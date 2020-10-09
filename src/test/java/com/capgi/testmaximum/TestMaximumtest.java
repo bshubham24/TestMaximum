@@ -28,4 +28,25 @@ public class TestMaximumtest {
 		Integer result = testMaximum.maximum(100, 300, 400);
 		assertEquals((Integer) 400, result);
 	}
+
+	@Test
+	public void TestMaximumStringAtFirstPosition() {
+		TestMaximum testMaximum = new TestMaximum();
+		String result = testMaximum.maximum("Working", "Sleep", "Eat");
+		assertEquals("Working", result);
+	}
+
+	@Test
+	public void TestMaximumStringAtSecondPosition() {
+		TestMaximum testMaximum = new TestMaximum();
+		String result = testMaximum.maximum("Eat", "Working", "Sleep");
+		assertEquals("Working", result);
+	}
+
+	@Test
+	public void TestMaximumStringAtThirdPosition() {
+		TestMaximum testMaximum = new TestMaximum();
+		String result = testMaximum.maximum("Eat", "Sleep", "Working");
+		assertEquals("Working", result);
+	}
 }

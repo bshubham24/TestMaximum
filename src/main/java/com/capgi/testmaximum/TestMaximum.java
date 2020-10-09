@@ -13,8 +13,22 @@ public class TestMaximum {
 
 	}
 
+	public static String maximum(String a, String b, String c) {
+		String max = a;
+		if (b.compareTo(max) > 0) {
+			max = b;
+		}
+		if (c.compareTo(max) > 0) {
+			max = c;
+		}
+		return max;
+
+	}
+
 	public static void main(String[] args) {
-		int max = maximum(100, 59, 40);
-		System.out.println(max);
+		int maxInt = maximum(100, 59, 40);
+		System.out.println(maxInt);
+		String maxStr = maximum("Eat", "Sleep", "Working");
+		System.out.println(maxStr);
 	}
 }
