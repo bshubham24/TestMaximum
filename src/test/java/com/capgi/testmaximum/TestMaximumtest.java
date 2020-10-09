@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class TestMaximumtest {
 	@Test
-	public void testSomeLibraryMethod() {
+	public void T() {
 
 	}
 }
