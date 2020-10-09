@@ -1,37 +1,31 @@
 package com.capgi.testmaximum;
 
-public class TestMaximum<T extends Comparable<T>> {
-	T a, b, c;
+import java.util.ArrayList;
+import java.util.Collections;
 
-	public TestMaximum(T a, T b, T c) {
-		this.a = a;
-		this.b = b;
-		this.c = c;
+public class TestMaximum<T extends Comparable<T>> {
+
+	ArrayList<T> list = new ArrayList<>();
+
+	public TestMaximum(T... values) {
+		for (T value : values)
+			this.list.add(value);
 	}
 
 	public T maximum() {
-		return TestMaximum.maximum(a, b, c);
+		return maximum(list);
 	}
 
-	public static <T extends Comparable<T>> T maximum(T a, T b, T c) {
-		T max = a;
-		if (b.compareTo(max) > 0) {
-			max = b;
+	public static <T extends Comparable<T>> T maximum(ArrayList<T> list) {
+		if (list.size() == 0) {
+			System.out.println("The list is empty");
+			return null;
 		}
-		if (c.compareTo(max) > 0) {
-			max = c;
+
+		else {
+			System.out.println("Max: " + Collections.max(list));
+			return Collections.max(list);
 		}
-		return max;
-
-	}
-
-	public static void main(String[] args) {
-		Integer aInt = 100, bInt = 50, cInt = 40;
-		String aStr = "Eat", bStr = "Sleep", cStr = "Working";
-		Float aFloat = 12.12345f, bFloat = 34.12543f, cFloat = 98.4598f;
-		new TestMaximum(aInt, bInt, cInt).maximum();
-		new TestMaximum(aStr, bStr, cStr).maximum();
-		new TestMaximum(aFloat, bFloat, cFloat).maximum();
 
 	}
 }
