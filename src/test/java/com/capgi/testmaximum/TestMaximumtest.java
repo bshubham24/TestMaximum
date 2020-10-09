@@ -27,6 +27,12 @@ public class TestMaximumtest {
 	}
 
 	@Test
+	public void TestMaximumIntegerWhenVariableArgs() {
+		TestMaximum testMaximum = new TestMaximum(100, 300, 400, 690, 476, 908);
+		assertEquals((Integer) 908, testMaximum.maximum());
+	}
+
+	@Test
 	public void TestMaximumStringAtFirstPosition() {
 		TestMaximum testMaximum = new TestMaximum("Working", "Sleep", "Eat");
 		assertEquals("Working", testMaximum.maximum());
@@ -45,6 +51,12 @@ public class TestMaximumtest {
 	}
 
 	@Test
+	public void TestMaximumStringWhenVariableArgs() {
+		TestMaximum testMaximum = new TestMaximum("eat", "sleep", "viverpool", "valencia", "barcela");
+		assertEquals("viverpool", testMaximum.maximum());
+	}
+
+	@Test
 	public void TestMaximumFloatAtFirstPosition() {
 		TestMaximum testMaximum = new TestMaximum(100.87f, 30.45f, 40.533f);
 		assertEquals((Float) 100.87f, testMaximum.maximum());
@@ -60,6 +72,12 @@ public class TestMaximumtest {
 	public void TestMaximumFloatAtThirdPosition() {
 		TestMaximum testMaximum = new TestMaximum(30.45f, 40.533f, 100.87f);
 		assertEquals((Float) 100.87f, testMaximum.maximum());
+	}
+
+	@Test
+	public void TestMaximumFloatWhenVariableArgs() {
+		TestMaximum testMaximum = new TestMaximum(30.45f, 40.533f, 100.87f, 10002.98f, 8766.87f);
+		assertEquals((Float) 10002.98f, testMaximum.maximum());
 	}
 
 }
