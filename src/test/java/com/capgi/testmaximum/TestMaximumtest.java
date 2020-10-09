@@ -21,4 +21,11 @@ public class TestMaximumtest {
 		Integer result = testMaximum.maximum(100, 300, 40);
 		assertEquals((Integer) 300, result);
 	}
+
+	@Test
+	public void TestMaximumIntegerAtThirdPosition() {
+		TestMaximum testMaximum = new TestMaximum();
+		Integer result = testMaximum.maximum(100, 300, 400);
+		assertEquals((Integer) 400, result);
+	}
 }
