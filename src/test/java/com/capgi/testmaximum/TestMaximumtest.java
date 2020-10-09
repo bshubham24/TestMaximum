@@ -49,4 +49,26 @@ public class TestMaximumtest {
 		String result = testMaximum.maximum("Eat", "Sleep", "Working");
 		assertEquals("Working", result);
 	}
+
+	@Test
+	public void TestMaximumFloatAtFirstPosition() {
+		TestMaximum testMaximum = new TestMaximum();
+		Float result = testMaximum.maximum(100.87f, 30.45f, 40.533f);
+		assertEquals((Float) 100.87f, result);
+	}
+
+	@Test
+	public void TestMaximumFloatAtSecondPosition() {
+		TestMaximum testMaximum = new TestMaximum();
+		Float result = testMaximum.maximum(30.45f, 100.87f, 40.533f);
+		assertEquals((Float) 100.87f, result);
+	}
+
+	@Test
+	public void TestMaximumFloatAtThirdPosition() {
+		TestMaximum testMaximum = new TestMaximum();
+		Float result = testMaximum.maximum(30.45f, 40.533f, 100.87f);
+		assertEquals((Float) 100.87f, result);
+	}
+
 }
