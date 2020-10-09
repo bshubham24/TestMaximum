@@ -10,65 +10,56 @@ import org.junit.Test;
 public class TestMaximumtest {
 	@Test
 	public void TestMaximumIntegerAtFirstPosition() {
-		TestMaximum testMaximum = new TestMaximum();
-		Integer result = testMaximum.maximum(100, 30, 40);
-		assertEquals((Integer) 100, result);
+		TestMaximum testMaximum = new TestMaximum(100, 30, 40);
+		assertEquals((Integer) 100, testMaximum.maximum());
 	}
 
 	@Test
 	public void TestMaximumIntegerAtSecondPosition() {
-		TestMaximum testMaximum = new TestMaximum();
-		Integer result = testMaximum.maximum(100, 300, 40);
-		assertEquals((Integer) 300, result);
+		TestMaximum testMaximum = new TestMaximum(100, 300, 40);
+		assertEquals((Integer) 300, testMaximum.maximum());
 	}
 
 	@Test
 	public void TestMaximumIntegerAtThirdPosition() {
-		TestMaximum testMaximum = new TestMaximum();
-		Integer result = testMaximum.maximum(100, 300, 400);
-		assertEquals((Integer) 400, result);
+		TestMaximum testMaximum = new TestMaximum(100, 300, 400);
+		assertEquals((Integer) 400, testMaximum.maximum());
 	}
 
 	@Test
 	public void TestMaximumStringAtFirstPosition() {
-		TestMaximum testMaximum = new TestMaximum();
-		String result = testMaximum.maximum("Working", "Sleep", "Eat");
-		assertEquals("Working", result);
+		TestMaximum testMaximum = new TestMaximum("Working", "Sleep", "Eat");
+		assertEquals("Working", testMaximum.maximum());
 	}
 
 	@Test
 	public void TestMaximumStringAtSecondPosition() {
-		TestMaximum testMaximum = new TestMaximum();
-		String result = testMaximum.maximum("Eat", "Working", "Sleep");
-		assertEquals("Working", result);
+		TestMaximum testMaximum = new TestMaximum("Eat", "Working", "Sleep");
+		assertEquals("Working", testMaximum.maximum());
 	}
 
 	@Test
 	public void TestMaximumStringAtThirdPosition() {
-		TestMaximum testMaximum = new TestMaximum();
-		String result = testMaximum.maximum("Eat", "Sleep", "Working");
-		assertEquals("Working", result);
+		TestMaximum testMaximum = new TestMaximum("Eat", "Sleep", "Working");
+		assertEquals("Working", testMaximum.maximum());
 	}
 
 	@Test
 	public void TestMaximumFloatAtFirstPosition() {
-		TestMaximum testMaximum = new TestMaximum();
-		Float result = testMaximum.maximum(100.87f, 30.45f, 40.533f);
-		assertEquals((Float) 100.87f, result);
+		TestMaximum testMaximum = new TestMaximum(100.87f, 30.45f, 40.533f);
+		assertEquals((Float) 100.87f, testMaximum.maximum());
 	}
 
 	@Test
 	public void TestMaximumFloatAtSecondPosition() {
-		TestMaximum testMaximum = new TestMaximum();
-		Float result = testMaximum.maximum(30.45f, 100.87f, 40.533f);
-		assertEquals((Float) 100.87f, result);
+		TestMaximum testMaximum = new TestMaximum(30.45f, 100.87f, 40.533f);
+		assertEquals((Float) 100.87f, testMaximum.maximum());
 	}
 
 	@Test
 	public void TestMaximumFloatAtThirdPosition() {
-		TestMaximum testMaximum = new TestMaximum();
-		Float result = testMaximum.maximum(30.45f, 40.533f, 100.87f);
-		assertEquals((Float) 100.87f, result);
+		TestMaximum testMaximum = new TestMaximum(30.45f, 40.533f, 100.87f);
+		assertEquals((Float) 100.87f, testMaximum.maximum());
 	}
 
 }
